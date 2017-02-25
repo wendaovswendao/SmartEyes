@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		355CDC787BA09412B3B88E03 /* libPods-R360SmartEyes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EED61D81E27F48F7BF244345 /* libPods-R360SmartEyes.a */; };
 		B3804E4B1E601A02002AA7CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E4A1E601A02002AA7CF /* main.m */; };
 		B3804E4E1E601A02002AA7CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E4D1E601A02002AA7CF /* AppDelegate.m */; };
 		B3804E511E601A02002AA7CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E501E601A02002AA7CF /* ViewController.m */; };
 		B3804E541E601A02002AA7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3804E521E601A02002AA7CF /* Main.storyboard */; };
 		B3804E561E601A02002AA7CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3804E551E601A02002AA7CF /* Assets.xcassets */; };
 		B3804E591E601A02002AA7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3804E571E601A02002AA7CF /* LaunchScreen.storyboard */; };
+		B3804E631E60251C002AA7CF /* UIImage+R360SmartEyes.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E621E60251C002AA7CF /* UIImage+R360SmartEyes.m */; };
+		B3804E661E6127F3002AA7CF /* RSEIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E651E6127F3002AA7CF /* RSEIDViewController.m */; };
+		B3804E691E612809002AA7CF /* RSECreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E681E612809002AA7CF /* RSECreditCardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D147E5F371E8C079EEC49D0 /* Pods-R360SmartEyes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R360SmartEyes.release.xcconfig"; path = "Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes.release.xcconfig"; sourceTree = "<group>"; };
+		7253A8535D664774651FD327 /* Pods-R360SmartEyes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R360SmartEyes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes.debug.xcconfig"; sourceTree = "<group>"; };
 		B3804E461E601A02002AA7CF /* R360SmartEyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R360SmartEyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3804E4A1E601A02002AA7CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3804E4C1E601A02002AA7CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +32,13 @@
 		B3804E551E601A02002AA7CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3804E581E601A02002AA7CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3804E5A1E601A02002AA7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3804E611E60251C002AA7CF /* UIImage+R360SmartEyes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+R360SmartEyes.h"; sourceTree = "<group>"; };
+		B3804E621E60251C002AA7CF /* UIImage+R360SmartEyes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+R360SmartEyes.m"; sourceTree = "<group>"; };
+		B3804E641E6127F3002AA7CF /* RSEIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSEIDViewController.h; sourceTree = "<group>"; };
+		B3804E651E6127F3002AA7CF /* RSEIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEIDViewController.m; sourceTree = "<group>"; };
+		B3804E671E612809002AA7CF /* RSECreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSECreditCardViewController.h; sourceTree = "<group>"; };
+		B3804E681E612809002AA7CF /* RSECreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSECreditCardViewController.m; sourceTree = "<group>"; };
+		EED61D81E27F48F7BF244345 /* libPods-R360SmartEyes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-R360SmartEyes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +46,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355CDC787BA09412B3B88E03 /* libPods-R360SmartEyes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A4510CECBA94A5C3BDA8B4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7253A8535D664774651FD327 /* Pods-R360SmartEyes.debug.xcconfig */,
+				5D147E5F371E8C079EEC49D0 /* Pods-R360SmartEyes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B3804E3D1E601A02002AA7CF = {
 			isa = PBXGroup;
 			children = (
+				B3804E601E602478002AA7CF /* R360SEUtil */,
 				B3804E481E601A02002AA7CF /* R360SmartEyes */,
 				B3804E471E601A02002AA7CF /* Products */,
+				4A4510CECBA94A5C3BDA8B4E /* Pods */,
+				BF091BE80B8401F0B8A29D52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +88,10 @@
 				B3804E4D1E601A02002AA7CF /* AppDelegate.m */,
 				B3804E4F1E601A02002AA7CF /* ViewController.h */,
 				B3804E501E601A02002AA7CF /* ViewController.m */,
+				B3804E641E6127F3002AA7CF /* RSEIDViewController.h */,
+				B3804E651E6127F3002AA7CF /* RSEIDViewController.m */,
+				B3804E671E612809002AA7CF /* RSECreditCardViewController.h */,
+				B3804E681E612809002AA7CF /* RSECreditCardViewController.m */,
 				B3804E521E601A02002AA7CF /* Main.storyboard */,
 				B3804E551E601A02002AA7CF /* Assets.xcassets */,
 				B3804E571E601A02002AA7CF /* LaunchScreen.storyboard */,
@@ -79,6 +109,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3804E601E602478002AA7CF /* R360SEUtil */ = {
+			isa = PBXGroup;
+			children = (
+				B3804E611E60251C002AA7CF /* UIImage+R360SmartEyes.h */,
+				B3804E621E60251C002AA7CF /* UIImage+R360SmartEyes.m */,
+			);
+			name = R360SEUtil;
+			path = R360SmartEyes/R360SEUtil;
+			sourceTree = "<group>";
+		};
+		BF091BE80B8401F0B8A29D52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EED61D81E27F48F7BF244345 /* libPods-R360SmartEyes.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3804E5D1E601A02002AA7CF /* Build configuration list for PBXNativeTarget "R360SmartEyes" */;
 			buildPhases = (
+				9FC2923E01BBD7A0D2241026 /* [CP] Check Pods Manifest.lock */,
 				B3804E421E601A02002AA7CF /* Sources */,
 				B3804E431E601A02002AA7CF /* Frameworks */,
 				B3804E441E601A02002AA7CF /* Resources */,
+				A784D6507848A94E6C301743 /* [CP] Embed Pods Frameworks */,
+				C11187B1F746A86E142A8782 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +197,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9FC2923E01BBD7A0D2241026 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A784D6507848A94E6C301743 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C11187B1F746A86E142A8782 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3804E421E601A02002AA7CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,6 +252,9 @@
 			files = (
 				B3804E511E601A02002AA7CF /* ViewController.m in Sources */,
 				B3804E4E1E601A02002AA7CF /* AppDelegate.m in Sources */,
+				B3804E691E612809002AA7CF /* RSECreditCardViewController.m in Sources */,
+				B3804E631E60251C002AA7CF /* UIImage+R360SmartEyes.m in Sources */,
+				B3804E661E6127F3002AA7CF /* RSEIDViewController.m in Sources */,
 				B3804E4B1E601A02002AA7CF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +371,11 @@
 		};
 		B3804E5E1E601A02002AA7CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7253A8535D664774651FD327 /* Pods-R360SmartEyes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G8KFD5U329;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = R360SmartEyes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -282,9 +386,11 @@
 		};
 		B3804E5F1E601A02002AA7CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D147E5F371E8C079EEC49D0 /* Pods-R360SmartEyes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G8KFD5U329;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = R360SmartEyes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

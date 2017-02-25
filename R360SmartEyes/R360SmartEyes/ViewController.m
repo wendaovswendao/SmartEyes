@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RSEIDViewController.h"
 
 @interface RSEButton : UIButton
 
@@ -36,12 +37,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+
+    RSEButton *button = [RSEButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"身份证" forState:UIControlStateNormal];
+    button.frame = CGRectMake(10, 50, 100, 50);
+    [button addTarget:self action:@selector(gotoIDCardVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)gotoIDCardVC {
+    RSEIDViewController *idCardVC = [[RSEIDViewController alloc] init];
+    [self presentViewController:idCardVC animated:YES completion:nil];
 }
 
 
