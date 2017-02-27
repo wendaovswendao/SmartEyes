@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '682A276C7894555A8E0762C32EBD000E'
+               BlueprintIdentifier = '2589167F7DD4993336139A3FFFC9507D'
                BlueprintName = 'Pods-R360SmartEyes'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-R360SmartEyes.a'>
