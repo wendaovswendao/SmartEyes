@@ -6,27 +6,23 @@
 	<dict>
 		<key>LLSimpleCamera.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-R360SmartEyes.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>TesseractOCRiOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -46,17 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD7901FDB8405E9504F70E4522CAE2E3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C839E4C19063D1523073BF07C750364F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EB6AE17909325C4043D034FB37471F3B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

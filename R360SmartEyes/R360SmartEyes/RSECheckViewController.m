@@ -20,6 +20,7 @@
 #import "IFlyFaceImage.h"
 #import "CalculatorTools.h"
 #import "FaceData.h"
+#import "IFlyFaceResultKeys.h"
 
 typedef NS_ENUM(NSUInteger, kAuthStatus) {
     kAuthFace = 0,
