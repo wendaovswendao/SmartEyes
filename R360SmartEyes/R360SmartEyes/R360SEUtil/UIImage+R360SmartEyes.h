@@ -15,4 +15,8 @@
 
 // 图片变形
 -(UIImage*)resizedImageToFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale;
+
+
+// 裁剪图片
+-(UIImage*)getSubImage:(CGRect)rect;
 @end

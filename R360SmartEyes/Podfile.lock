@@ -1,3 +1,18 @@
-PODFILE CHECKSUM: 9dff6cc9cf52c6a4e4a93b4fe6b2b80f0e876e93
+PODS:
+  - LLSimpleCamera (5.0.0)
+  - Masonry (1.0.2)
+  - TesseractOCRiOS (4.0.0)
+
+DEPENDENCIES:
+  - LLSimpleCamera (~> 5.0.0)
+  - Masonry (~> 1.0.2)
+  - TesseractOCRiOS (~> 4.0.0)
+
+SPEC CHECKSUMS:
+  LLSimpleCamera: 7175ccb81be71c83d79933089322eb662b1f0327
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+
+PODFILE CHECKSUM: 93b7e873b5117b9de8dc0ec1449ad345aeacde60
 
 COCOAPODS: 1.1.0
