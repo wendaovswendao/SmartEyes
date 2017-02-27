@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		355CDC787BA09412B3B88E03 /* libPods-R360SmartEyes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EED61D81E27F48F7BF244345 /* libPods-R360SmartEyes.a */; };
+		7AAB7446881CEA24836CC39B /* libPods-R360SmartEyes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32627C201311FA2B1F408B86 /* libPods-R360SmartEyes.a */; };
 		B3804E4B1E601A02002AA7CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E4A1E601A02002AA7CF /* main.m */; };
 		B3804E4E1E601A02002AA7CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E4D1E601A02002AA7CF /* AppDelegate.m */; };
 		B3804E511E601A02002AA7CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E501E601A02002AA7CF /* ViewController.m */; };
@@ -17,9 +17,31 @@
 		B3804E631E60251C002AA7CF /* UIImage+R360SmartEyes.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E621E60251C002AA7CF /* UIImage+R360SmartEyes.m */; };
 		B3804E661E6127F3002AA7CF /* RSEIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E651E6127F3002AA7CF /* RSEIDViewController.m */; };
 		B3804E691E612809002AA7CF /* RSECreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E681E612809002AA7CF /* RSECreditCardViewController.m */; };
+		D2EA9A191E613C2300D3796B /* RSECheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A181E613C2300D3796B /* RSECheckViewController.m */; };
+		D2EA9A1D1E614D3700D3796B /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A1C1E614D3700D3796B /* iflyMSC.framework */; };
+		D2EA9A1F1E614D5200D3796B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A1E1E614D5200D3796B /* libz.tbd */; };
+		D2EA9A201E614D5800D3796B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A1A1E613D1000D3796B /* CoreTelephony.framework */; };
+		D2EA9A221E614D6300D3796B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A211E614D6300D3796B /* CoreLocation.framework */; };
+		D2EA9A241E614D6800D3796B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A231E614D6800D3796B /* AVFoundation.framework */; };
+		D2EA9A261E614D7300D3796B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A251E614D7300D3796B /* AddressBook.framework */; };
+		D2EA9A281E614D8200D3796B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A271E614D8200D3796B /* AudioToolbox.framework */; };
+		D2EA9A2A1E614D8F00D3796B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A291E614D8F00D3796B /* SystemConfiguration.framework */; };
+		D2EA9A2C1E614DA300D3796B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A2B1E614DA300D3796B /* QuartzCore.framework */; };
+		D2EA9A2E1E614DB000D3796B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A2D1E614DB000D3796B /* CoreGraphics.framework */; };
+		D2EA9A301E614DBD00D3796B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A2F1E614DBD00D3796B /* libc++.tbd */; };
+		D2EA9A591E61506800D3796B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A581E61506800D3796B /* UIKit.framework */; };
+		D2EA9A5B1E61508700D3796B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EA9A5A1E61508700D3796B /* Foundation.framework */; };
+		D2EA9A861E6151D300D3796B /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A851E6151D300D3796B /* CaptureManager.m */; };
+		D2EA9A891E6152C000D3796B /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A881E6152C000D3796B /* UIImage+Extensions.m */; };
+		D2EA9A8C1E61535200D3796B /* PermissionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A8B1E61535200D3796B /* PermissionDetector.m */; };
+		D2EA9A8F1E6153DB00D3796B /* IFlyFaceImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A8E1E6153DB00D3796B /* IFlyFaceImage.m */; };
+		D2EA9A921E61550100D3796B /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A911E61550100D3796B /* CanvasView.m */; };
+		D2EA9A961E6159E800D3796B /* CalculatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A951E6159E800D3796B /* CalculatorTools.m */; };
+		D2EA9A991E61700F00D3796B /* FaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA9A981E61700F00D3796B /* FaceData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32627C201311FA2B1F408B86 /* libPods-R360SmartEyes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-R360SmartEyes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D147E5F371E8C079EEC49D0 /* Pods-R360SmartEyes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R360SmartEyes.release.xcconfig"; path = "Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes.release.xcconfig"; sourceTree = "<group>"; };
 		7253A8535D664774651FD327 /* Pods-R360SmartEyes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R360SmartEyes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes.debug.xcconfig"; sourceTree = "<group>"; };
 		B3804E461E601A02002AA7CF /* R360SmartEyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R360SmartEyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,7 +60,36 @@
 		B3804E651E6127F3002AA7CF /* RSEIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEIDViewController.m; sourceTree = "<group>"; };
 		B3804E671E612809002AA7CF /* RSECreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSECreditCardViewController.h; sourceTree = "<group>"; };
 		B3804E681E612809002AA7CF /* RSECreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSECreditCardViewController.m; sourceTree = "<group>"; };
-		EED61D81E27F48F7BF244345 /* libPods-R360SmartEyes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-R360SmartEyes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2EA9A171E613C2300D3796B /* RSECheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSECheckViewController.h; sourceTree = "<group>"; };
+		D2EA9A181E613C2300D3796B /* RSECheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSECheckViewController.m; sourceTree = "<group>"; };
+		D2EA9A1A1E613D1000D3796B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D2EA9A1C1E614D3700D3796B /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		D2EA9A1E1E614D5200D3796B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D2EA9A211E614D6300D3796B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D2EA9A231E614D6800D3796B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D2EA9A251E614D7300D3796B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D2EA9A271E614D8200D3796B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D2EA9A291E614D8F00D3796B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D2EA9A2B1E614DA300D3796B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2EA9A2D1E614DB000D3796B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2EA9A2F1E614DBD00D3796B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D2EA9A581E61506800D3796B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D2EA9A5A1E61508700D3796B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2EA9A841E6151D300D3796B /* CaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureManager.h; sourceTree = "<group>"; };
+		D2EA9A851E6151D300D3796B /* CaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureManager.m; sourceTree = "<group>"; };
+		D2EA9A871E6152C000D3796B /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		D2EA9A881E6152C000D3796B /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		D2EA9A8A1E61535200D3796B /* PermissionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionDetector.h; sourceTree = "<group>"; };
+		D2EA9A8B1E61535200D3796B /* PermissionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionDetector.m; sourceTree = "<group>"; };
+		D2EA9A8D1E6153DB00D3796B /* IFlyFaceImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFaceImage.h; sourceTree = "<group>"; };
+		D2EA9A8E1E6153DB00D3796B /* IFlyFaceImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceImage.m; sourceTree = "<group>"; };
+		D2EA9A901E61550100D3796B /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		D2EA9A911E61550100D3796B /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		D2EA9A931E61591000D3796B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D2EA9A941E6159E800D3796B /* CalculatorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorTools.h; sourceTree = "<group>"; };
+		D2EA9A951E6159E800D3796B /* CalculatorTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTools.m; sourceTree = "<group>"; };
+		D2EA9A971E61700F00D3796B /* FaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceData.h; sourceTree = "<group>"; };
+		D2EA9A981E61700F00D3796B /* FaceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +97,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				355CDC787BA09412B3B88E03 /* libPods-R360SmartEyes.a in Frameworks */,
+				D2EA9A5B1E61508700D3796B /* Foundation.framework in Frameworks */,
+				D2EA9A591E61506800D3796B /* UIKit.framework in Frameworks */,
+				D2EA9A301E614DBD00D3796B /* libc++.tbd in Frameworks */,
+				D2EA9A2E1E614DB000D3796B /* CoreGraphics.framework in Frameworks */,
+				D2EA9A2C1E614DA300D3796B /* QuartzCore.framework in Frameworks */,
+				D2EA9A2A1E614D8F00D3796B /* SystemConfiguration.framework in Frameworks */,
+				D2EA9A281E614D8200D3796B /* AudioToolbox.framework in Frameworks */,
+				D2EA9A261E614D7300D3796B /* AddressBook.framework in Frameworks */,
+				D2EA9A241E614D6800D3796B /* AVFoundation.framework in Frameworks */,
+				D2EA9A221E614D6300D3796B /* CoreLocation.framework in Frameworks */,
+				D2EA9A201E614D5800D3796B /* CoreTelephony.framework in Frameworks */,
+				D2EA9A1F1E614D5200D3796B /* libz.tbd in Frameworks */,
+				D2EA9A1D1E614D3700D3796B /* iflyMSC.framework in Frameworks */,
+				7AAB7446881CEA24836CC39B /* libPods-R360SmartEyes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +129,7 @@
 		B3804E3D1E601A02002AA7CF = {
 			isa = PBXGroup;
 			children = (
+				D2EA9A931E61591000D3796B /* PrefixHeader.pch */,
 				B3804E601E602478002AA7CF /* R360SEUtil */,
 				B3804E481E601A02002AA7CF /* R360SmartEyes */,
 				B3804E471E601A02002AA7CF /* Products */,
@@ -84,6 +149,8 @@
 		B3804E481E601A02002AA7CF /* R360SmartEyes */ = {
 			isa = PBXGroup;
 			children = (
+				D2EA9A831E6151B000D3796B /* Detector */,
+				D2EA9A1C1E614D3700D3796B /* iflyMSC.framework */,
 				B3804E4C1E601A02002AA7CF /* AppDelegate.h */,
 				B3804E4D1E601A02002AA7CF /* AppDelegate.m */,
 				B3804E4F1E601A02002AA7CF /* ViewController.h */,
@@ -97,6 +164,8 @@
 				B3804E571E601A02002AA7CF /* LaunchScreen.storyboard */,
 				B3804E5A1E601A02002AA7CF /* Info.plist */,
 				B3804E491E601A02002AA7CF /* Supporting Files */,
+				D2EA9A171E613C2300D3796B /* RSECheckViewController.h */,
+				D2EA9A181E613C2300D3796B /* RSECheckViewController.m */,
 			);
 			path = R360SmartEyes;
 			sourceTree = "<group>";
@@ -122,9 +191,42 @@
 		BF091BE80B8401F0B8A29D52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EED61D81E27F48F7BF244345 /* libPods-R360SmartEyes.a */,
+				D2EA9A5A1E61508700D3796B /* Foundation.framework */,
+				D2EA9A581E61506800D3796B /* UIKit.framework */,
+				D2EA9A2F1E614DBD00D3796B /* libc++.tbd */,
+				D2EA9A2D1E614DB000D3796B /* CoreGraphics.framework */,
+				D2EA9A2B1E614DA300D3796B /* QuartzCore.framework */,
+				D2EA9A291E614D8F00D3796B /* SystemConfiguration.framework */,
+				D2EA9A271E614D8200D3796B /* AudioToolbox.framework */,
+				D2EA9A251E614D7300D3796B /* AddressBook.framework */,
+				D2EA9A231E614D6800D3796B /* AVFoundation.framework */,
+				D2EA9A211E614D6300D3796B /* CoreLocation.framework */,
+				D2EA9A1E1E614D5200D3796B /* libz.tbd */,
+				D2EA9A1A1E613D1000D3796B /* CoreTelephony.framework */,
+				32627C201311FA2B1F408B86 /* libPods-R360SmartEyes.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2EA9A831E6151B000D3796B /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				D2EA9A841E6151D300D3796B /* CaptureManager.h */,
+				D2EA9A851E6151D300D3796B /* CaptureManager.m */,
+				D2EA9A871E6152C000D3796B /* UIImage+Extensions.h */,
+				D2EA9A881E6152C000D3796B /* UIImage+Extensions.m */,
+				D2EA9A8A1E61535200D3796B /* PermissionDetector.h */,
+				D2EA9A8B1E61535200D3796B /* PermissionDetector.m */,
+				D2EA9A8D1E6153DB00D3796B /* IFlyFaceImage.h */,
+				D2EA9A8E1E6153DB00D3796B /* IFlyFaceImage.m */,
+				D2EA9A901E61550100D3796B /* CanvasView.h */,
+				D2EA9A911E61550100D3796B /* CanvasView.m */,
+				D2EA9A941E6159E800D3796B /* CalculatorTools.h */,
+				D2EA9A951E6159E800D3796B /* CalculatorTools.m */,
+				D2EA9A971E61700F00D3796B /* FaceData.h */,
+				D2EA9A981E61700F00D3796B /* FaceData.m */,
+			);
+			path = Detector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +354,17 @@
 			files = (
 				B3804E511E601A02002AA7CF /* ViewController.m in Sources */,
 				B3804E4E1E601A02002AA7CF /* AppDelegate.m in Sources */,
+				D2EA9A921E61550100D3796B /* CanvasView.m in Sources */,
+				D2EA9A861E6151D300D3796B /* CaptureManager.m in Sources */,
 				B3804E691E612809002AA7CF /* RSECreditCardViewController.m in Sources */,
+				D2EA9A891E6152C000D3796B /* UIImage+Extensions.m in Sources */,
+				D2EA9A961E6159E800D3796B /* CalculatorTools.m in Sources */,
 				B3804E631E60251C002AA7CF /* UIImage+R360SmartEyes.m in Sources */,
+				D2EA9A8C1E61535200D3796B /* PermissionDetector.m in Sources */,
 				B3804E661E6127F3002AA7CF /* RSEIDViewController.m in Sources */,
+				D2EA9A991E61700F00D3796B /* FaceData.m in Sources */,
+				D2EA9A8F1E6153DB00D3796B /* IFlyFaceImage.m in Sources */,
+				D2EA9A191E613C2300D3796B /* RSECheckViewController.m in Sources */,
 				B3804E4B1E601A02002AA7CF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +415,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -352,6 +463,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -376,6 +488,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G8KFD5U329;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/R360SmartEyes",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = R360SmartEyes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -391,6 +509,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G8KFD5U329;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/R360SmartEyes",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = R360SmartEyes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

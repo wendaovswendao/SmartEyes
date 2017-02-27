@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "RSEIDViewController.h"
+#import "RSECheckViewController.h"
 
 @interface RSEButton : UIButton
 
@@ -43,6 +44,12 @@
     button.frame = CGRectMake(10, 50, 100, 50);
     [button addTarget:self action:@selector(gotoIDCardVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    RSEButton *deteBtn = [RSEButton buttonWithType:UIButtonTypeCustom];
+    [deteBtn setTitle:@"活体检测" forState:UIControlStateNormal];
+    deteBtn.frame = CGRectMake(10, 150, 100, 50);
+    [deteBtn addTarget:self action:@selector(gotoLivingDetectionVc) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:deteBtn];
 }
 
 
@@ -54,6 +61,11 @@
 - (void)gotoIDCardVC {
     RSEIDViewController *idCardVC = [[RSEIDViewController alloc] init];
     [self presentViewController:idCardVC animated:YES completion:nil];
+}
+
+- (void)gotoLivingDetectionVc {
+    RSECheckViewController *vc = [RSECheckViewController new];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "iflyMSC/IFlyFaceSDK.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@,", @"58afda89"];
+    [IFlySpeechUtility createUtility:initString];
     return YES;
 }
 

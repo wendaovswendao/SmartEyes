@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  R360SmartEyes
+//
+//  Created by whj on 17/2/25.
+//  Copyright © 2017年 R360. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+
+#define KCIFlyFaceResultBottom   @"bottom"
+#define KCIFlyFaceResultTop     @"top"
+#define KCIFlyFaceResultLeft      @"left"
+#define KCIFlyFaceResultRight     @"right"
+#define KCIFlyFaceResultPointX    @"x"
+#define KCIFlyFaceResultPointY    @"y"
+#define KCIFlyFaceResultRet       @"ret"
+#define KCIFlyFaceResultResult    @"result"
+#define KCIFlyFaceResultPosition  @"position"
+#define KCIFlyFaceResultLandmark  @"landmark"
+#define KCIFlyFaceResultFace      @"face"
+#define KCIFlyFaceResultSST       @"sst"
+#define KCIFlyFaceResultGID       @"gid"
+#define KCIFlyFaceResultRST       @"rst"
+#define KCIFlyFaceResultVerf      @"verf"
+#define KCIFlyFaceResultScore     @"score"
+#define KCIFlyFaceResultAttribute  @"attribute"
+#define KCIFlyFaceResultPose      @"pose"
+#define KCIFlyFaceResultPitch     @"pitch"
+#define KCIFlyFaceResultReg       @"reg"
+#define KCIFlyFaceResultVerify    @"verify"
+#define KCIFlyFaceResultDetect    @"detect"
+#define KCIFlyFaceResultAlign     @"align"
+#define KCIFlyFaceResultSuccess   @"success"
+
+
+#endif /* PrefixHeader_pch */
