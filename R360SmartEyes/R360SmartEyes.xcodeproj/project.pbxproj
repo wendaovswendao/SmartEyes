@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		355CDC787BA09412B3B88E03 /* libPods-R360SmartEyes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EED61D81E27F48F7BF244345 /* libPods-R360SmartEyes.a */; };
 		B302A6B11E63CD5D003A89C4 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B302A6B01E63CD5D003A89C4 /* tessdata */; };
+		B31F05E51E66F15E0085C67F /* REIDAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31F05E41E66F15E0085C67F /* REIDAuthenticationViewController.m */; };
 		B3804E4B1E601A02002AA7CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E4A1E601A02002AA7CF /* main.m */; };
 		B3804E4E1E601A02002AA7CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E4D1E601A02002AA7CF /* AppDelegate.m */; };
 		B3804E511E601A02002AA7CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3804E501E601A02002AA7CF /* ViewController.m */; };
@@ -68,6 +69,8 @@
 		5D147E5F371E8C079EEC49D0 /* Pods-R360SmartEyes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R360SmartEyes.release.xcconfig"; path = "Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes.release.xcconfig"; sourceTree = "<group>"; };
 		7253A8535D664774651FD327 /* Pods-R360SmartEyes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R360SmartEyes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-R360SmartEyes/Pods-R360SmartEyes.debug.xcconfig"; sourceTree = "<group>"; };
 		B302A6B01E63CD5D003A89C4 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		B31F05E31E66F15E0085C67F /* REIDAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REIDAuthenticationViewController.h; sourceTree = "<group>"; };
+		B31F05E41E66F15E0085C67F /* REIDAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REIDAuthenticationViewController.m; sourceTree = "<group>"; };
 		B3804E461E601A02002AA7CF /* R360SmartEyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R360SmartEyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3804E4A1E601A02002AA7CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3804E4C1E601A02002AA7CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 				B3804E651E6127F3002AA7CF /* RSEIDViewController.m */,
 				B3804E671E612809002AA7CF /* RSECreditCardViewController.h */,
 				B3804E681E612809002AA7CF /* RSECreditCardViewController.m */,
+				B31F05E31E66F15E0085C67F /* REIDAuthenticationViewController.h */,
+				B31F05E41E66F15E0085C67F /* REIDAuthenticationViewController.m */,
 				B3804E521E601A02002AA7CF /* Main.storyboard */,
 				B3804E551E601A02002AA7CF /* Assets.xcassets */,
 				B3804E571E601A02002AA7CF /* LaunchScreen.storyboard */,
@@ -477,6 +482,7 @@
 				B3804E4B1E601A02002AA7CF /* main.m in Sources */,
 				D2CDE9041E64169B000A0B24 /* CalculatorTools.m in Sources */,
 				B3804E6C1E61349A002AA7CF /* CustomCameraHelper.m in Sources */,
+				B31F05E51E66F15E0085C67F /* REIDAuthenticationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

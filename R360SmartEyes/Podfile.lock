@@ -1,21 +1,44 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Base64 (1.1.2)
   - CardIO (5.3.2)
+  - JSONKit (1.4)
   - LLSimpleCamera (5.0.0)
   - Masonry (1.0.2)
   - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - Base64 (~> 1.1.2)
   - CardIO (= 5.3.2)
+  - JSONKit (= 1.4)
   - LLSimpleCamera (~> 5.0.0)
   - Masonry (~> 1.0.2)
   - TesseractOCRiOS (~> 4.0.0)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   CardIO: 92c45caef0d986c4a303a7afba0c9b76ff2b1f6e
+  JSONKit: 5b69e804ea54d99293eed0fd2ce596c5703fefb0
   LLSimpleCamera: 7175ccb81be71c83d79933089322eb662b1f0327
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
 
-PODFILE CHECKSUM: d021f3769134d10ab287b8c31c008b6527bf7941
+PODFILE CHECKSUM: d409c966b8cfe09a44bd6778db476e4e3dd987f8
 
 COCOAPODS: 1.1.0

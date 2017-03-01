@@ -10,6 +10,7 @@
 #import "RSEIDViewController.h"
 #import "RSECheckViewController.h"
 #import "RSECreditCardViewController.h"
+#import "REIDAuthenticationViewController.h"
 
 @interface RSEButton : UIButton
 
@@ -57,6 +58,12 @@
     button1.frame = CGRectMake(10, 220, 100, 50);
     [button1 addTarget:self action:@selector(gotoCreditCardVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
+    
+    RSEButton *button2 = [RSEButton buttonWithType:UIButtonTypeCustom];
+    [button2 setTitle:@"身份认证" forState:UIControlStateNormal];
+    button2.frame = CGRectMake(10, 300, 100, 50);
+    [button2 addTarget:self action:@selector(gotoIDAuthenticationVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button2];
 }
 
 
@@ -80,5 +87,10 @@
     [self presentViewController:creditCardVC animated:YES completion:nil];
 }
 
+
+- (void)gotoIDAuthenticationVC {
+    REIDAuthenticationViewController *vc  = [[REIDAuthenticationViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 @end
