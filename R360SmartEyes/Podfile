@@ -4,5 +4,6 @@ target ‘R360SmartEyes’ do
     pod 'TesseractOCRiOS', '~> 4.0.0'
     pod 'LLSimpleCamera', '~> 5.0.0'
     pod 'Masonry', '~> 1.0.2'
+    pod 'CardIO', '5.3.2'
 
 end

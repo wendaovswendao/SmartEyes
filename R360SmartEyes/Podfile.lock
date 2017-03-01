@@ -1,18 +1,21 @@
 PODS:
+  - CardIO (5.3.2)
   - LLSimpleCamera (5.0.0)
   - Masonry (1.0.2)
   - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
+  - CardIO (= 5.3.2)
   - LLSimpleCamera (~> 5.0.0)
   - Masonry (~> 1.0.2)
   - TesseractOCRiOS (~> 4.0.0)
 
 SPEC CHECKSUMS:
+  CardIO: 92c45caef0d986c4a303a7afba0c9b76ff2b1f6e
   LLSimpleCamera: 7175ccb81be71c83d79933089322eb662b1f0327
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
 
-PODFILE CHECKSUM: 93b7e873b5117b9de8dc0ec1449ad345aeacde60
+PODFILE CHECKSUM: d021f3769134d10ab287b8c31c008b6527bf7941
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.1.0

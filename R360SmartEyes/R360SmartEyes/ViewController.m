@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "RSEIDViewController.h"
 #import "RSECheckViewController.h"
+#import "RSECreditCardViewController.h"
 
 @interface RSEButton : UIButton
 
@@ -50,6 +51,12 @@
     deteBtn.frame = CGRectMake(10, 150, 100, 50);
     [deteBtn addTarget:self action:@selector(gotoLivingDetectionVc) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:deteBtn];
+    
+    RSEButton *button1 = [RSEButton buttonWithType:UIButtonTypeCustom];
+    [button1 setTitle:@"信用卡" forState:UIControlStateNormal];
+    button1.frame = CGRectMake(10, 220, 100, 50);
+    [button1 addTarget:self action:@selector(gotoCreditCardVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
 }
 
 
@@ -66,6 +73,11 @@
 - (void)gotoLivingDetectionVc {
     RSECheckViewController *vc = [RSECheckViewController new];
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)gotoCreditCardVC {
+    RSECreditCardViewController *creditCardVC = [[RSECreditCardViewController alloc] init];
+    [self presentViewController:creditCardVC animated:YES completion:nil];
 }
 
 
