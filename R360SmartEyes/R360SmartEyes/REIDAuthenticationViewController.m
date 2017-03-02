@@ -17,6 +17,7 @@
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (nonatomic, strong) UIImage *img;
 @property (nonatomic, strong) UILabel *textLabel;
+@property (nonatomic, strong) UIActivityIndicatorView *loadingView;
 
 @end
 
@@ -57,6 +58,11 @@
     [uploadBtn addTarget:self action:@selector(upload) forControlEvents:UIControlEventTouchUpInside];
     [uploadBtn setFrame:CGRectMake(width - 120, height - 90, 100, 50)];
     [self.view addSubview:uploadBtn];
+    
+    _loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [_imageView addSubview:_loadingView];
+    _loadingView.center = CGPointMake(_imageView.bounds.size.width / 2.f, _imageView.bounds.size.height / 2.f);
+    [_loadingView setHidden:YES];
 }
 
 - (void)close {
@@ -89,6 +95,8 @@
     
     
     manager.responseSerializer.acceptableContentTypes = set;
+    [_loadingView setHidden:NO];
+    [_loadingView startAnimating];
     [manager POST:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"responseObject = %@", responseObject);
         
@@ -106,8 +114,10 @@
         
         NSString *prompt = [responseObject objectForKey:@"similary"];
         [_textLabel setText:[NSString stringWithFormat:@"相似度:%@", prompt]];
+        [_loadingView setHidden:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"上传失败");
+        [_loadingView setHidden:YES];
     }];
 }
 
