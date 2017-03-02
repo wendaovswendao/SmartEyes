@@ -31,6 +31,15 @@
 
 @property (nonatomic, assign) CGPoint right_eyebrow_right_corner;
 
+@property (nonatomic, assign) CGPoint left_eye_center;
+
+@property (nonatomic, assign) CGPoint left_eye_left_corner;
+
+@property (nonatomic, assign) CGPoint right_eye_right_corner;
+
+@property (nonatomic, assign) CGPoint right_eye_center;
+
+
 
 - (void)setPoint:(NSDictionary *)pointDic;
 

@@ -20,6 +20,11 @@
     _right_eye_left_corner = CGPointFromString([landmark objectForKey:@"right_eye_left_corner"]);
     _left_eyebrow_left_corner = CGPointFromString([landmark objectForKey:@"left_eyebrow_left_corner"]);
     _right_eyebrow_right_corner = CGPointFromString([landmark objectForKey:@"right_eyebrow_right_corner"]);
+    _left_eye_center =  CGPointFromString([landmark objectForKey:@"left_eye_center"]);
+    
+    
+    _left_eye_left_corner = CGPointFromString([landmark objectForKey:@"left_eye_left_corner"]);
+    _right_eye_right_corner = CGPointFromString([landmark objectForKey:@"right_eye_right_corner"]);
     
 }
 
@@ -32,11 +37,11 @@
 }
 
 - (CGFloat)leftEyeHieght {
-    return ABS(_left_eyebrow_left_corner.y - _left_eye_right_corner.y);
+    return ABS(_left_eyebrow_left_corner.y - _left_eye_left_corner.y);
 }
 
 - (CGFloat)rightEyeHeight {
-    return ABS(_right_eyebrow_right_corner.y - _right_eye_left_corner.y);
+    return ABS(_right_eyebrow_right_corner.y - _right_eye_right_corner.y);
 }
 
 

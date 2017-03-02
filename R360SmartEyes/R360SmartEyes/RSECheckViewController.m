@@ -147,7 +147,6 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
 }
 
 - (void)authFace:(FaceData *)face {
-     NSLog(@"=========左眼:%f, 右眼:%f======", face.leftEyeHieght, face.rightEyeHeight);
     if (_isWaiting) {
         return;
     }
@@ -213,12 +212,11 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
         }
         case kAuthStatusEye:
         {
-            NSLog(@"=========左眼:%f, 右眼:%f======", face.leftEyeHieght, face.rightEyeHeight);
             [_promptLabel setText:@"请眨眼"];
             if (_preData == nil) {
                 _preData = face;
             } else {
-                if (_preData.leftEyeHieght - face.leftEyeHieght > 5 && _preData.rightEyeHeight - face.rightEyeHeight > 5) {
+                if (_preData.leftEyeHieght - face.leftEyeHieght > 3 || _preData.rightEyeHeight - face.rightEyeHeight > 3) {
                     _currentStatus = kAuthStatusSuccess;
                     [_promptLabel setText:@"检测成功"];
                     _preData = nil;

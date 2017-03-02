@@ -60,8 +60,8 @@
     [self.view addSubview:uploadBtn];
     
     _loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [_imageView addSubview:_loadingView];
-    _loadingView.center = CGPointMake(_imageView.bounds.size.width / 2.f, _imageView.bounds.size.height / 2.f);
+    [uploadBtn addSubview:_loadingView];
+    _loadingView.center = CGPointMake(uploadBtn.bounds.size.width / 2.f, uploadBtn.bounds.size.height / 2.f);
     [_loadingView setHidden:YES];
 }
 
@@ -116,7 +116,7 @@
         [_textLabel setText:[NSString stringWithFormat:@"相似度:%@", prompt]];
         [_loadingView setHidden:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"上传失败");
+        [self.view makeToast:@"上传失败"];
         [_loadingView setHidden:YES];
     }];
 }
