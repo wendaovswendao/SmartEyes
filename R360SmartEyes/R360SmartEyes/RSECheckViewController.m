@@ -193,10 +193,10 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
                 return;
             }
             
+            [_promptLabel setText:@"检测张嘴"];
             NSLog(@"当前宽度:%f 和高度:%f", face.mouthWidth, face.mouthHeight);
             
             if (!_preData) {
-                [_promptLabel setText:@"检测张嘴"];
                 _preData = face;
             } else {
                 if (ABS(face.mouthWidth - _preData.mouthWidth) > 20 && ABS(face.mouthHeight - _preData.mouthHeight) > 20) {
@@ -216,12 +216,12 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
         case kAuthMidFace:
         {
             NSLog(@"当前坐标:%@", NSStringFromCGPoint(face.position.origin));
+            [_promptLabel setText:@"请保持居中"];
             CGFloat centerX = face.position.origin.x + face.position.size.width / 2.f;
             if (ABS(centerX - _previewView.center.x) < 10) {
                 _preData = face;
                 _currentStatus = [[_headArray firstObject] integerValue];
                 [_headArray removeObject:[_headArray firstObject]];
-                [_promptLabel setText:@"请保持居中"];
                 [self wait];
             }
             break;
