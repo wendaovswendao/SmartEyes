@@ -122,7 +122,7 @@
     
     CGRect nameRect = CGRectMake(150, 65, 260, 70);
     
-    CGRect IDNumberRect = CGRectMake(250, 420, 500, 60);
+    CGRect IDNumberRect = CGRectMake(260, 420, 500, 60);
     
     
     G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"chi_sim"];
