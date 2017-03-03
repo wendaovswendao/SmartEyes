@@ -50,6 +50,11 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
 
 @property (nonatomic, assign) BOOL isWaiting;
 
+@property (nonatomic, strong) NSMutableArray *sortArray;
+
+@property (nonatomic, strong) NSMutableArray *headArray;
+
+@property (nonatomic, assign) NSInteger errorTimes;
 
 @end
 
@@ -133,6 +138,30 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
     
     [self.captureManager setup];
     [self.captureManager addObserver];
+    [self reload];
+}
+
+- (void)reload {
+    _currentStatus = kAuthFace;
+    NSArray *array = @[@(kAuthMidFace), @(kAuthStatusMouth), @(kAuthStatusEye)];
+    _sortArray = [NSMutableArray array];
+    while (_sortArray.count < 3) {
+        NSInteger index = arc4random() % 3;
+        NSNumber *num = [array objectAtIndex:index];
+        if (![_sortArray containsObject:num]) {
+            [_sortArray addObject:num];
+        }
+    }
+    
+    array = @[@(kAuthStatusLeftShake), @(kAuthStatusRightShake)];
+    _headArray = [NSMutableArray array];
+    while (_headArray.count < 2) {
+        NSInteger index = arc4random() % 2;
+        NSNumber *num = [array objectAtIndex:index];
+        if (![_headArray containsObject:num]) {
+            [_headArray addObject:num];
+        }
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -154,7 +183,8 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
     switch (_currentStatus) {
         case kAuthFace:
             [_promptLabel setText:@"检测到人脸"];
-            _currentStatus = kAuthStatusMouth;
+            _currentStatus = [[_sortArray firstObject] integerValue];
+            [_sortArray removeObject:[_sortArray firstObject]];
             [self wait];
             break;
         case kAuthStatusMouth:
@@ -170,9 +200,15 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
                 _preData = face;
             } else {
                 if (ABS(face.mouthWidth - _preData.mouthWidth) > 20 && ABS(face.mouthHeight - _preData.mouthHeight) > 20) {
-                    _currentStatus = kAuthMidFace;
+                    NSNumber *num = [_sortArray firstObject];
+                    if (!num) {
+                        _currentStatus = kAuthStatusSuccess;
+                    } else {
+                       _currentStatus = [num integerValue];
+                        [_sortArray removeObject:num];
+                    }
                     _preData = nil;
-                    [_promptLabel setText:@"请正对摄像头"];
+                    [_promptLabel setText:@"检测张嘴成功"];
                     [self wait];
                 }
             }
@@ -183,8 +219,9 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
             CGFloat centerX = face.position.origin.x + face.position.size.width / 2.f;
             if (ABS(centerX - _previewView.center.x) < 10) {
                 _preData = face;
-                _currentStatus = kAuthStatusLeftShake;
-                [_promptLabel setText:@"已经居中了"];
+                _currentStatus = [[_headArray firstObject] integerValue];
+                [_headArray removeObject:[_headArray firstObject]];
+                [_promptLabel setText:@"请保持居中"];
                 [self wait];
             }
             break;
@@ -193,7 +230,20 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
             [_promptLabel setText:@"请向左摇头"];
             NSLog(@"当前坐标:%@", NSStringFromCGPoint(face.position.origin));
             if (_preData.position.origin.x - face.position.origin.x > 50) {
-                _currentStatus = kAuthStatusRightShake;
+                NSNumber *num = [_headArray firstObject];
+                if (!num) {
+                    NSNumber *num = [_sortArray firstObject];
+                    if (!num) {
+                        _currentStatus = kAuthStatusSuccess;
+                    } else {
+                        _currentStatus = [num integerValue];
+                        [_sortArray removeObject:num];
+                    }
+                    _preData = nil;
+                } else {
+                    _currentStatus = [num integerValue];
+                    [_headArray removeObject:num];
+                }
                 [_promptLabel setText:@"检测左摇成功"];
                 [self wait];
             }
@@ -203,9 +253,21 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
             [_promptLabel setText:@"请向右摇头"];
             NSLog(@"当前坐标:%@", NSStringFromCGPoint(face.position.origin));
             if (face.position.origin.x - _preData.position.origin.x > 50) {
-                _currentStatus = kAuthStatusEye;
+                NSNumber *num = [_headArray firstObject];
+                if (!num) {
+                    NSNumber *num = [_sortArray firstObject];
+                    if (!num) {
+                        _currentStatus = kAuthStatusSuccess;
+                    } else {
+                        _currentStatus = [num integerValue];
+                        [_sortArray removeObject:num];
+                    }
+                    _preData = nil;
+                } else {
+                    _currentStatus = [num integerValue];
+                    [_headArray removeObject:num];
+                }
                 [_promptLabel setText:@"检测右摇成功"];
-                _preData = nil;
                 [self wait];
             }
             break;
@@ -217,12 +279,23 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
                 _preData = face;
             } else {
                 if (_preData.leftEyeHieght - face.leftEyeHieght > 3 || _preData.rightEyeHeight - face.rightEyeHeight > 3) {
-                    _currentStatus = kAuthStatusSuccess;
-                    [_promptLabel setText:@"检测成功"];
+                    NSNumber *num = [_sortArray firstObject];
+                    if (!num) {
+                        _currentStatus = kAuthStatusSuccess;
+                    } else {
+                        _currentStatus = [num integerValue];
+                        [_sortArray removeObject:num];
+                    }
+                    [_promptLabel setText:@"检测眨眼成功"];
                     _preData = nil;
                 }
             }
             break;
+        }
+        case kAuthStatusSuccess:
+        {
+            [_promptLabel setText:@"检测成功"];
+            _preData = nil;
         }
         default:
             break;
@@ -359,10 +432,22 @@ typedef NS_ENUM(NSUInteger, kAuthStatus) {
         }
         //没有检测到人脸或发生错误
         if (ret || !faceArray || [faceArray count]<1) {
+            if (_currentStatus != kAuthStatusSuccess && _currentStatus != kAuthMidFace) {
+                _errorTimes ++;
+                if (_errorTimes > 60) {
+                    [self reload];
+                    _errorTimes = 0;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [_promptLabel setText:@"检测失败, 重新检测中..."];
+                    } ) ;
+                }
+            }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self hideFace];
             } ) ;
             return;
+        } else {
+            _errorTimes = 0;
         }
         
         //检测到人脸

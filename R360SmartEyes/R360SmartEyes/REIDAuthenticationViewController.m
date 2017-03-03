@@ -33,6 +33,7 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     _imageView = [UIImageView new];
     _imageView.frame = CGRectMake(0, 120, width, width);
+    [_imageView setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:_imageView];
     
     _textLabel = [UILabel new];
@@ -42,18 +43,30 @@
     [self.view addSubview:_textLabel];
     
     UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    closeBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    closeBtn.layer.borderWidth = 1/[UIScreen mainScreen].scale;
+    [closeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    closeBtn.backgroundColor = [UIColor whiteColor];
     [closeBtn setTitle:@"关闭" forState:UIControlStateNormal];
     [closeBtn addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     [closeBtn setFrame:CGRectMake(20, 40, 100, 50)];
     [self.view addSubview:closeBtn];
     
     UIButton *caremaBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    caremaBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    caremaBtn.layer.borderWidth = 1/[UIScreen mainScreen].scale;
+    [caremaBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    caremaBtn.backgroundColor = [UIColor whiteColor];
     [caremaBtn setTitle:@"拍照" forState:UIControlStateNormal];
     [caremaBtn addTarget:self action:@selector(openCarema:) forControlEvents:UIControlEventTouchUpInside];
     [caremaBtn setFrame:CGRectMake(20, height - 90, 100, 50)];
     [self.view addSubview:caremaBtn];
     
     UIButton *uploadBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    uploadBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    uploadBtn.layer.borderWidth = 1/[UIScreen mainScreen].scale;
+    [uploadBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    uploadBtn.backgroundColor = [UIColor whiteColor];
     [uploadBtn setTitle:@"上传" forState:UIControlStateNormal];
     [uploadBtn addTarget:self action:@selector(upload) forControlEvents:UIControlEventTouchUpInside];
     [uploadBtn setFrame:CGRectMake(width - 120, height - 90, 100, 50)];
