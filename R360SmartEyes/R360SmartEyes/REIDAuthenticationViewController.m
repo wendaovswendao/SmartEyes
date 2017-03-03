@@ -10,6 +10,8 @@
 #import <AFNetworking.h>
 #import <Base64/MF_Base64Additions.h>
 #import <Toast/UIView+Toast.h>
+#import "UIImage+Extensions.h"
+#import <Masonry.h>
 
 @interface REIDAuthenticationViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -32,9 +34,15 @@
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     _imageView = [UIImageView new];
-    _imageView.frame = CGRectMake(0, 120, width, width);
+    _imageView.frame = self.view.bounds;
     [_imageView setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:_imageView];
+    [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.right.mas_equalTo(0);
+        make.top.mas_equalTo(100);
+        make.bottom.mas_equalTo(-100);
+    }];
     
     _textLabel = [UILabel new];
     [_textLabel setFrame:CGRectMake((width - 200) / 2, 100 , 200, 20)];
@@ -95,12 +103,13 @@
 }
 
 - (void)upload {
-    NSData *data = UIImageJPEGRepresentation(_img , 1);
+    NSData *data = UIImageJPEGRepresentation([_img imageRotatedByDegrees:90], 0.1);
     NSString *base64 = [data base64String];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:base64 forKey:@"base64"];
     
-    NSString *urlStr = @"http://10.2.129.89:8080/crawler-web/openapi/creditcard/activity/faceDetect.json";
+    NSString *urlStr = @"http://10.0.128.42:8080/crawler-web/openapi/creditcard/activity/faceDetect.json";
+    [_textLabel setText:@""];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSMutableSet *set = [NSMutableSet setWithSet:manager.responseSerializer.acceptableContentTypes];
     [set addObject:@"text/plain"];
@@ -108,6 +117,7 @@
     
     
     manager.responseSerializer.acceptableContentTypes = set;
+    manager.requestSerializer.timeoutInterval = 2 * 60;
     [_loadingView setHidden:NO];
     [_loadingView startAnimating];
     [manager POST:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -123,14 +133,21 @@
         NSString *base64Img = [responseObject objectForKey:@"base64"];
         NSData *data = [NSData dataWithBase64String:base64Img];
         UIImage *newImg = [UIImage imageWithData:data];
-        [_imageView setImage:newImg];
-        
-        NSString *prompt = [responseObject objectForKey:@"similary"];
-        [_textLabel setText:[NSString stringWithFormat:@"相似度:%@", prompt]];
-        [_loadingView setHidden:YES];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_imageView setImage:newImg];
+            
+            NSString *prompt = [responseObject objectForKey:@"similary"];
+           
+            [_textLabel setText:[NSString stringWithFormat:@"相似度:%.2f%%",  prompt.floatValue * 100]];
+            [_loadingView setHidden:YES];
+            [_loadingView stopAnimating];
+        });
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.view makeToast:@"上传失败"];
-        [_loadingView setHidden:YES];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_loadingView setHidden:YES];
+            [_loadingView stopAnimating];
+        });
     }];
 }
 
@@ -150,7 +167,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     _img = info[UIImagePickerControllerOriginalImage];
-    _imageView.contentMode = UIViewContentModeScaleAspectFit;
+    NSData *data = UIImageJPEGRepresentation(_img, 0.1);
+    _img = [UIImage imageWithData:data];
     _imageView.image = _img;
     [self dismissViewControllerAnimated:YES completion:nil];
     
