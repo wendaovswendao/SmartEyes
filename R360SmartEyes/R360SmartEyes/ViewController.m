@@ -11,6 +11,7 @@
 #import "RSECheckViewController.h"
 #import "RSECreditCardViewController.h"
 #import "REIDAuthenticationViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface RSEButton : UIButton
 
